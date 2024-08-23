@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sondage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submitPoll()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Question 1 : Quelle est votre couleur préférée ?</ion-label>
+        <ion-radio-group [(ngModel)]="pollData.question1" name="question1">
+          <ion-item>
+            <ion-label>Rouge</ion-label>
+            <ion-radio slot="start" value="rouge"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Bleu</ion-label>
+            <ion-radio slot="start" value="bleu"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Vert</ion-label>
+            <ion-radio slot="start" value="vert"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Question 2 : Votre boisson préférée ?</ion-label>
+        <ion-radio-group [(ngModel)]="pollData.question2" name="question2">
+          <ion-item>
+            <ion-label>Café</ion-label>
+            <ion-radio slot="start" value="café"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Thé</ion-label>
+            <ion-radio slot="start" value="thé"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Jus</ion-label>
+            <ion-radio slot="start" value="jus"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" type="submit">Soumettre</ion-button>
+  </form>
+</ion-content>
